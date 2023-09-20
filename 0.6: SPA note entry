@@ -1,0 +1,18 @@
+sequenceDiagram
+    participant User as User
+    participant App as Single-Page App
+
+    User->>App: Open App
+    activate App
+
+    User->>App: Click on 'New Note'
+    App->>App: Initialize new note
+    App-->>User: New note interface
+
+    User->>App: Write note content
+    User->>App: Click 'Save'
+
+    App->>App: Save note
+    App-->>User: Note saved confirmation
+
+    deactivate App
