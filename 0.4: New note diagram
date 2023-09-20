@@ -1,0 +1,13 @@
+graph TD
+subgraph BrowserSide
+        C -->|Sends POST request| D[Server]
+        D -->|Creates new note| E[Database]
+        E -->|Responds with success| C
+    end
+    subgraph UserSide
+        A[User] -->|Enters text| B[Text Field]
+        B -->|Clicks Save| C[Save Button]
+    end
+
+    
+
