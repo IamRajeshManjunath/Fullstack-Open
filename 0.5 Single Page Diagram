@@ -1,0 +1,11 @@
+graph TD
+  subgraph User
+    A[User] -->|Accesses| B(SPA Notes App)
+  end
+  subgraph Server
+    B -->|Requests| C[Server at https://studies.cs.helsinki.fi]
+    C -->|Serves SPA| B
+  end
+  subgraph Database
+    D[Database] -->|Stores Notes| C
+  end
